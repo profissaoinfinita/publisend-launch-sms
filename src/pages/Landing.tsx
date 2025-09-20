@@ -19,7 +19,8 @@ import {
   Zap,
   Target,
   Shield,
-  Award
+  Award,
+  Send
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
