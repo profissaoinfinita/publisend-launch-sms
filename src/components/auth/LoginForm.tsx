@@ -39,8 +39,10 @@ export const LoginForm = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-accent/10 p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Send className="h-8 w-8 text-primary" />
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
+              <Send className="w-4 h-4 text-white" />
+            </div>
             <h1 className="text-3xl font-bold text-primary">Publisend</h1>
           </div>
           <p className="text-muted-foreground">Plataforma de SMS Marketing</p>
