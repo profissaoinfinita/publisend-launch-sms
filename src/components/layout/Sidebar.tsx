@@ -32,12 +32,10 @@ export const Sidebar = ({ onClose }: SidebarProps) => {
     <div className="w-64 bg-sidebar border-r border-sidebar-border flex flex-col">
       {/* Logo */}
       <div className="h-16 flex items-center px-6 border-b border-sidebar-border">
-        <div className="flex items-center space-x-3">
-          <img 
-            src="/logo.svg" 
-            alt="Publisend Logo" 
-            className="w-8 h-8"
-          />
+        <div className="flex items-center space-x-2">
+          <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
+            <Send className="w-4 h-4 text-white" />
+          </div>
           <div>
             <h1 className="text-lg font-bold text-sidebar-foreground">Publisend</h1>
             <p className="text-xs text-sidebar-foreground/60">SMS Marketing</p>

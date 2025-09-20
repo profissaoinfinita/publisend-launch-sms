@@ -47,10 +47,12 @@ const Landing = () => {
       <header className="bg-background/95 backdrop-blur-sm border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <MessageSquare className="w-4 h-4 text-white" />
-              </div>
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/logo.svg" 
+                alt="Publisend Logo" 
+                className="w-8 h-8"
+              />
               <h1 className="text-lg sm:text-xl font-bold text-primary">Publisend</h1>
             </div>
             
