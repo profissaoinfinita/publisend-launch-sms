@@ -1,0 +1,11 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Balão de conversa simplificado -->
+  <path d="M6 10C6 7.79086 7.79086 6 10 6H22C24.2091 6 26 7.79086 26 10V18C26 20.2091 24.2091 22 22 22H16L12 26V22H10C7.79086 22 6 20.2091 6 18V10Z" fill="#FF6B35"/>
+  
+  <!-- Avião de papel -->
+  <path d="M12 13L20 10L16 18L12 13Z" fill="white"/>
+  <path d="M16 18L20 10L22 12L16 18Z" fill="white" opacity="0.7"/>
+  
+  <!-- Ponto decorativo -->
+  <circle cx="10" cy="12" r="1" fill="white" opacity="0.8"/>
+</svg>

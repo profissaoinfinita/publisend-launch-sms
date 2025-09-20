@@ -1,0 +1,25 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Balão de conversa principal -->
+  <path d="M8 12C8 8.68629 10.6863 6 14 6H26C29.3137 6 32 8.68629 32 12V20C32 23.3137 29.3137 26 26 26H20L16 30V26H14C10.6863 26 8 23.3137 8 20V12Z" fill="url(#gradient1)" stroke="url(#gradient2)" stroke-width="1.5"/>
+  
+  <!-- Avião de papel dentro do balão -->
+  <path d="M15 16L25 12L20 20L15 16Z" fill="white" opacity="0.9"/>
+  <path d="M20 20L25 12L28 14L20 20Z" fill="white" opacity="0.7"/>
+  
+  <!-- Pontos de exclamação para dinamismo -->
+  <circle cx="12" cy="14" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="28" cy="18" r="1" fill="white" opacity="0.6"/>
+  
+  <!-- Gradientes -->
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FF8E53;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFB366;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E55A2B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CC4A1F;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
