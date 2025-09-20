@@ -1,15 +1,18 @@
-import { Bell, User } from "lucide-react";
+import { Bell, User, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { useAuth } from "@/contexts/AuthContext";
 
 export const Header = () => {
+  const { user, logout } = useAuth();
   return (
     <header className="h-16 border-b bg-background px-6 flex items-center justify-between">
       <div className="flex items-center space-x-4">
@@ -31,12 +34,12 @@ export const Header = () => {
             <Button variant="ghost" className="flex items-center space-x-2 px-3">
               <Avatar className="w-8 h-8">
                 <AvatarFallback className="bg-primary text-primary-foreground">
-                  JD
+                  {user?.name.charAt(0).toUpperCase() || "U"}
                 </AvatarFallback>
               </Avatar>
               <div className="text-left">
-                <p className="text-sm font-medium">João Silva</p>
-                <p className="text-xs text-muted-foreground">Plano Pro</p>
+                <p className="text-sm font-medium">{user?.name}</p>
+                <p className="text-xs text-muted-foreground">{user?.email}</p>
               </div>
             </Button>
           </DropdownMenuTrigger>
@@ -46,7 +49,10 @@ export const Header = () => {
               Meu Perfil
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Sair</DropdownMenuItem>
+            <DropdownMenuItem onClick={logout} className="text-destructive">
+              <LogOut className="w-4 h-4 mr-2" />
+              Sair
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
