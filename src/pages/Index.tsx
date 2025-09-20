@@ -2,9 +2,14 @@ import { DashboardLayout } from "@/components/layout/DashboardLayout";
 import { MetricCard } from "@/components/dashboard/MetricCard";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { MessageSquare, Users, TrendingUp, Send, Plus, Eye } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Dashboard = () => {
+  const [isTutorialOpen, setIsTutorialOpen] = useState(false);
+
   return (
     <DashboardLayout>
       <div className="space-y-6">
@@ -16,14 +21,37 @@ const Dashboard = () => {
               Gerencie suas campanhas de SMS e maximize seus resultados com nossa plataforma.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-              <Button variant="secondary" className="bg-white text-primary hover:bg-white/90 w-full sm:w-auto">
-                <Plus className="w-4 h-4 mr-2" />
-                Nova Campanha
-              </Button>
-              <Button variant="outline" className="border-white/20 text-white bg-transparent hover:bg-white/10 hover:text-white w-full sm:w-auto">
-                <Eye className="w-4 h-4 mr-2" />
-                Ver Tutorial
-              </Button>
+              <Link to="/campaigns/new">
+                <Button variant="secondary" className="bg-white text-primary hover:bg-white/90 w-full sm:w-auto">
+                  <Plus className="w-4 h-4 mr-2" />
+                  Nova Campanha
+                </Button>
+              </Link>
+              <Dialog open={isTutorialOpen} onOpenChange={setIsTutorialOpen}>
+                <DialogTrigger asChild>
+                  <Button variant="outline" className="border-white/20 text-white bg-transparent hover:bg-white/10 hover:text-white w-full sm:w-auto">
+                    <Eye className="w-4 h-4 mr-2" />
+                    Ver Tutorial
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl w-full">
+                  <DialogHeader>
+                    <DialogTitle>Tutorial do Publisend</DialogTitle>
+                  </DialogHeader>
+                  <div className="aspect-video w-full">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/TXJGqNZi-Ps"
+                      title="Tutorial do Publisend"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="rounded-lg"
+                    ></iframe>
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>

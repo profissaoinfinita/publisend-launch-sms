@@ -74,10 +74,10 @@ export const Header = ({ onMenuClick }: HeaderProps) => {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-56">
-            <DropdownMenuItem>
-              <User className="w-4 h-4 mr-2" />
-              Meu Perfil
-            </DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => navigate('/profile')}>
+                          <User className="w-4 h-4 mr-2" />
+                          Meu Perfil
+                        </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem onClick={handleLogout} className="text-destructive">
               <LogOut className="w-4 h-4 mr-2" />

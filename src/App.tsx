@@ -13,6 +13,7 @@ import Templates from "./pages/Templates";
 import Lists from "./pages/Lists";
 import Billing from "./pages/Billing";
 import Settings from "./pages/Settings";
+import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,19 +34,20 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<LoginForm />} />
-        {user ? (
-          <>
-            <Route path="/dashboard" element={<Index />} />
-            <Route path="/campaigns" element={<Campaigns />} />
-            <Route path="/campaigns/new" element={<NewCampaign />} />
-            <Route path="/templates" element={<Templates />} />
-            <Route path="/lists" element={<Lists />} />
-            <Route path="/billing" element={<Billing />} />
-            <Route path="/settings" element={<Settings />} />
-          </>
-        ) : (
-          <Route path="/dashboard" element={<LoginForm />} />
-        )}
+                {user ? (
+                  <>
+                    <Route path="/dashboard" element={<Index />} />
+                    <Route path="/campaigns" element={<Campaigns />} />
+                    <Route path="/campaigns/new" element={<NewCampaign />} />
+                    <Route path="/templates" element={<Templates />} />
+                    <Route path="/lists" element={<Lists />} />
+                    <Route path="/billing" element={<Billing />} />
+                    <Route path="/settings" element={<Settings />} />
+                    <Route path="/profile" element={<Profile />} />
+                  </>
+                ) : (
+                  <Route path="/dashboard" element={<LoginForm />} />
+                )}
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
