@@ -25,30 +25,30 @@ const Settings = () => {
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Header */}
         <div>
-          <h1 className="text-3xl font-bold">Configurações</h1>
-          <p className="text-muted-foreground mt-1">
+          <h1 className="text-2xl sm:text-3xl font-bold">Configurações</h1>
+          <p className="text-muted-foreground mt-1 text-sm sm:text-base">
             Gerencie sua conta, integrações e preferências
           </p>
         </div>
 
         <Tabs defaultValue="profile" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-5">
-            <TabsTrigger value="profile">Perfil</TabsTrigger>
-            <TabsTrigger value="integrations">Integrações</TabsTrigger>
-            <TabsTrigger value="notifications">Notificações</TabsTrigger>
-            <TabsTrigger value="security">Segurança</TabsTrigger>
-            <TabsTrigger value="billing">Cobrança</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+            <TabsTrigger value="profile" className="text-xs sm:text-sm">Perfil</TabsTrigger>
+            <TabsTrigger value="integrations" className="text-xs sm:text-sm">Integrações</TabsTrigger>
+            <TabsTrigger value="notifications" className="text-xs sm:text-sm">Notificações</TabsTrigger>
+            <TabsTrigger value="security" className="text-xs sm:text-sm">Segurança</TabsTrigger>
+            <TabsTrigger value="billing" className="text-xs sm:text-sm">Cobrança</TabsTrigger>
           </TabsList>
 
           <TabsContent value="profile" className="space-y-6">
             <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="flex items-center text-base sm:text-lg">
                   <User className="w-5 h-5 mr-2" />
                   Informações Pessoais
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 p-4 sm:p-6 pt-0">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="name">Nome Completo</Label>
@@ -97,8 +97,8 @@ const Settings = () => {
 
           <TabsContent value="integrations" className="space-y-6">
             <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="flex items-center text-base sm:text-lg">
                   <Webhook className="w-5 h-5 mr-2" />
                   Integrações de Checkout
                 </CardTitle>
@@ -169,8 +169,8 @@ const Settings = () => {
 
           <TabsContent value="notifications" className="space-y-6">
             <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="flex items-center text-base sm:text-lg">
                   <Bell className="w-5 h-5 mr-2" />
                   Preferências de Notificação
                 </CardTitle>
@@ -221,8 +221,8 @@ const Settings = () => {
 
           <TabsContent value="security" className="space-y-6">
             <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="flex items-center text-base sm:text-lg">
                   <Shield className="w-5 h-5 mr-2" />
                   Segurança da Conta
                 </CardTitle>
@@ -285,8 +285,8 @@ const Settings = () => {
 
           <TabsContent value="billing" className="space-y-6">
             <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="flex items-center text-base sm:text-lg">
                   <CreditCard className="w-5 h-5 mr-2" />
                   Informações de Cobrança
                 </CardTitle>

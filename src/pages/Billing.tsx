@@ -81,8 +81,8 @@ const Billing = () => {
         {/* Header */}
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold">Créditos SMS</h1>
-            <p className="text-muted-foreground mt-1">
+            <h1 className="text-2xl sm:text-3xl font-bold">Créditos SMS</h1>
+            <p className="text-muted-foreground mt-1 text-sm sm:text-base">
               Gerencie seus créditos e histórico de compras
             </p>
           </div>
@@ -90,34 +90,34 @@ const Billing = () => {
 
         {/* Current Balance */}
         <Card className="bg-gradient-hero text-white border-0">
-          <CardContent className="p-8">
+          <CardContent className="p-4 sm:p-6 lg:p-8">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-white/80 text-lg">Saldo Atual</p>
-                <p className="text-5xl font-bold mb-2">2.847</p>
-                <p className="text-white/80">créditos SMS disponíveis</p>
+                <p className="text-white/80 text-base sm:text-lg">Saldo Atual</p>
+                <p className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">2.847</p>
+                <p className="text-white/80 text-sm sm:text-base">créditos SMS disponíveis</p>
               </div>
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
-                <MessageSquare className="w-8 h-8 text-white" />
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 rounded-2xl flex items-center justify-center">
+                <MessageSquare className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
             </div>
-            <div className="flex items-center mt-6 space-x-4">
+            <div className="flex flex-col sm:flex-row sm:items-center mt-4 sm:mt-6 gap-3 sm:gap-4">
               <div className="flex items-center space-x-2">
                 <TrendingUp className="w-4 h-4" />
-                <span className="text-sm">Uso médio: 1.2k/mês</span>
+                <span className="text-xs sm:text-sm">Uso médio: 1.2k/mês</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Calendar className="w-4 h-4" />
-                <span className="text-sm">Duração estimada: 2,3 meses</span>
+                <span className="text-xs sm:text-sm">Duração estimada: 2,3 meses</span>
               </div>
             </div>
           </CardContent>
         </Card>
 
         {/* Usage Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           <Card>
-            <CardContent className="p-6">
+            <CardContent className="p-4 sm:p-6">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">Últimos 30 dias</p>
@@ -131,7 +131,7 @@ const Billing = () => {
             </CardContent>
           </Card>
           <Card>
-            <CardContent className="p-6">
+            <CardContent className="p-4 sm:p-6">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">Custo por SMS</p>
@@ -145,7 +145,7 @@ const Billing = () => {
             </CardContent>
           </Card>
           <Card>
-            <CardContent className="p-6">
+            <CardContent className="p-4 sm:p-6">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">Total Investido</p>

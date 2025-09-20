@@ -129,7 +129,7 @@ const NewCampaign = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <Card className="bg-muted/30">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-sm">Templates Sugeridos</CardTitle>
@@ -195,7 +195,7 @@ const NewCampaign = () => {
       case 3:
         return (
           <div className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
               <Card>
                 <CardHeader className="pb-3">
                   <CardTitle className="text-sm flex items-center">
@@ -284,7 +284,7 @@ const NewCampaign = () => {
           <div className="space-y-6">
             <div>
               <Label className="text-base font-medium">Quando enviar?</Label>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                 <Card 
                   className={`cursor-pointer transition-colors ${
                     formData.sendNow ? "border-primary bg-primary/5" : "border-border"
@@ -330,7 +330,7 @@ const NewCampaign = () => {
             </div>
 
             {!formData.sendNow && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="date">Data do Envio</Label>
                   <Input
@@ -377,15 +377,15 @@ const NewCampaign = () => {
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Header */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             <Link to="/campaigns">
               <Button variant="ghost" size="icon">
                 <ChevronLeft className="w-4 h-4" />
               </Button>
             </Link>
             <div>
-              <h1 className="text-3xl font-bold">Nova Campanha SMS</h1>
-              <p className="text-muted-foreground mt-1">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold">Nova Campanha SMS</h1>
+              <p className="text-muted-foreground mt-1 text-sm sm:text-base">
                 Crie uma nova campanha em 4 passos simples
               </p>
             </div>
@@ -394,20 +394,20 @@ const NewCampaign = () => {
 
         {/* Progress */}
         <Card>
-          <CardContent className="p-6">
+          <CardContent className="p-4 sm:p-6">
             <div className="flex items-center justify-between mb-4">
               <span className="text-sm font-medium">Progresso</span>
               <span className="text-sm text-muted-foreground">
                 Passo {currentStep} de {steps.length}
               </span>
             </div>
-            <Progress value={progress} className="mb-6" />
+            <Progress value={progress} className="mb-4 sm:mb-6" />
             
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between overflow-x-auto">
               {steps.map((step) => (
                 <div
                   key={step.id}
-                  className={`flex items-center space-x-2 ${
+                  className={`flex items-center space-x-2 min-w-0 ${
                     step.id === currentStep
                       ? "text-primary"
                       : step.id < currentStep
@@ -416,7 +416,7 @@ const NewCampaign = () => {
                   }`}
                 >
                   <div
-                    className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${
+                    className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center border-2 flex-shrink-0 ${
                       step.id === currentStep
                         ? "border-primary bg-primary/10"
                         : step.id < currentStep
@@ -425,12 +425,12 @@ const NewCampaign = () => {
                     }`}
                   >
                     {step.id < currentStep ? (
-                      <CheckCircle className="w-4 h-4" />
+                      <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                     ) : (
-                      <step.icon className="w-4 h-4" />
+                      <step.icon className="w-3 h-3 sm:w-4 sm:h-4" />
                     )}
                   </div>
-                  <span className="text-sm font-medium hidden md:block">{step.name}</span>
+                  <span className="text-xs sm:text-sm font-medium hidden sm:block whitespace-nowrap">{step.name}</span>
                 </div>
               ))}
             </div>
@@ -439,35 +439,36 @@ const NewCampaign = () => {
 
         {/* Step Content */}
         <Card>
-          <CardHeader>
-            <CardTitle>{steps[currentStep - 1].name}</CardTitle>
+          <CardHeader className="p-4 sm:p-6">
+            <CardTitle className="text-lg sm:text-xl">{steps[currentStep - 1].name}</CardTitle>
           </CardHeader>
-          <CardContent className="p-6">
+          <CardContent className="p-4 sm:p-6">
             {renderStepContent()}
           </CardContent>
         </Card>
 
         {/* Navigation */}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-0">
           <Button
             variant="outline"
             onClick={prevStep}
             disabled={currentStep === 1}
+            className="w-full sm:w-auto"
           >
             <ChevronLeft className="w-4 h-4 mr-2" />
             Anterior
           </Button>
 
-          <div className="flex items-center space-x-3">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-3">
             {currentStep === steps.length ? (
               <>
-                <Button variant="outline">Salvar como Rascunho</Button>
-                <Button className="bg-gradient-primary hover:bg-primary-hover">
+                <Button variant="outline" className="w-full sm:w-auto">Salvar como Rascunho</Button>
+                <Button className="bg-gradient-primary hover:bg-primary-hover w-full sm:w-auto">
                   {formData.sendNow ? "Enviar Campanha" : "Agendar Campanha"}
                 </Button>
               </>
             ) : (
-              <Button onClick={nextStep}>
+              <Button onClick={nextStep} className="w-full sm:w-auto">
                 Próximo
                 <ChevronRight className="w-4 h-4 ml-2" />
               </Button>

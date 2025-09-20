@@ -1,4 +1,4 @@
-import { Bell, User, LogOut, Home } from "lucide-react";
+import { Bell, User, LogOut, Home, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -12,7 +12,11 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-export const Header = () => {
+interface HeaderProps {
+  onMenuClick?: () => void;
+}
+
+export const Header = ({ onMenuClick }: HeaderProps) => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
@@ -22,16 +26,26 @@ export const Header = () => {
   };
 
   return (
-    <header className="h-16 border-b bg-background px-6 flex items-center justify-between">
+    <header className="h-16 border-b bg-background px-4 lg:px-6 flex items-center justify-between">
       <div className="flex items-center space-x-4">
+        {/* Mobile Menu Button */}
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={onMenuClick}
+          className="lg:hidden"
+        >
+          <Menu className="w-5 h-5" />
+        </Button>
+        
         <Button 
           variant="ghost" 
           size="sm" 
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/dashboard')}
           className="flex items-center space-x-2"
         >
           <Home className="w-4 h-4" />
-          <span>Publisend</span>
+          <span className="hidden sm:inline">Publisend</span>
         </Button>
       </div>
 

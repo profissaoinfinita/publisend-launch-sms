@@ -9,18 +9,18 @@ const Dashboard = () => {
     <DashboardLayout>
       <div className="space-y-6">
         {/* Welcome Section */}
-        <div className="bg-gradient-hero rounded-2xl p-8 text-white">
+        <div className="bg-gradient-hero rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 text-white">
           <div className="max-w-2xl">
-            <h1 className="text-3xl font-bold mb-2">Bem-vindo ao Publisend!</h1>
-            <p className="text-white/90 mb-6">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2">Bem-vindo ao Publisend!</h1>
+            <p className="text-white/90 mb-4 sm:mb-6 text-sm sm:text-base">
               Gerencie suas campanhas de SMS e maximize seus resultados com nossa plataforma.
             </p>
-            <div className="flex items-center space-x-4">
-              <Button variant="secondary" className="bg-white text-primary hover:bg-white/90">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+              <Button variant="secondary" className="bg-white text-primary hover:bg-white/90 w-full sm:w-auto">
                 <Plus className="w-4 h-4 mr-2" />
                 Nova Campanha
               </Button>
-              <Button variant="outline" className="border-white/20 text-white bg-transparent hover:bg-white/10 hover:text-white">
+              <Button variant="outline" className="border-white/20 text-white bg-transparent hover:bg-white/10 hover:text-white w-full sm:w-auto">
                 <Eye className="w-4 h-4 mr-2" />
                 Ver Tutorial
               </Button>
@@ -61,7 +61,7 @@ const Dashboard = () => {
         </div>
 
         {/* Recent Activity */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
           <Card>
             <CardHeader>
               <CardTitle>Campanhas Recentes</CardTitle>

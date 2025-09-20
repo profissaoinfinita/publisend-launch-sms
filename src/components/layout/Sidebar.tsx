@@ -21,7 +21,11 @@ const navigation = [
   { name: "Configurações", href: "/settings", icon: Settings },
 ];
 
-export const Sidebar = () => {
+interface SidebarProps {
+  onClose?: () => void;
+}
+
+export const Sidebar = ({ onClose }: SidebarProps) => {
   const location = useLocation();
 
   return (
@@ -47,6 +51,7 @@ export const Sidebar = () => {
             <Link
               key={item.name}
               to={item.href}
+              onClick={onClose}
               className={cn(
                 "flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
                 isActive

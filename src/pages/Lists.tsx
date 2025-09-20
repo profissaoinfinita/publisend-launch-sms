@@ -63,19 +63,19 @@ const Lists = () => {
     <DashboardLayout>
       <div className="space-y-6">
         {/* Header */}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-bold">Listas de Contatos</h1>
-            <p className="text-muted-foreground mt-1">
+            <h1 className="text-2xl sm:text-3xl font-bold">Listas de Contatos</h1>
+            <p className="text-muted-foreground mt-1 text-sm sm:text-base">
               Organize seus contatos em listas para campanhas segmentadas
             </p>
           </div>
-          <div className="flex items-center space-x-3">
-            <Button variant="outline">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <Button variant="outline" className="w-full sm:w-auto">
               <Upload className="w-4 h-4 mr-2" />
               Importar CSV
             </Button>
-            <Button className="bg-gradient-primary hover:bg-primary-hover">
+            <Button className="bg-gradient-primary hover:bg-primary-hover w-full sm:w-auto">
               <Plus className="w-4 h-4 mr-2" />
               Nova Lista
             </Button>
@@ -83,55 +83,55 @@ const Lists = () => {
         </div>
 
         {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           <Card>
-            <CardContent className="p-6">
+            <CardContent className="p-4 sm:p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground">Total de Listas</p>
-                  <p className="text-3xl font-bold">12</p>
+                  <p className="text-xs sm:text-sm font-medium text-muted-foreground">Total de Listas</p>
+                  <p className="text-xl sm:text-3xl font-bold">12</p>
                 </div>
-                <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center">
-                  <Users className="w-4 h-4 text-primary" />
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <Users className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
                 </div>
               </div>
             </CardContent>
           </Card>
           <Card>
-            <CardContent className="p-6">
+            <CardContent className="p-4 sm:p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground">Total de Contatos</p>
-                  <p className="text-3xl font-bold">8.247</p>
+                  <p className="text-xs sm:text-sm font-medium text-muted-foreground">Total de Contatos</p>
+                  <p className="text-xl sm:text-3xl font-bold">8.247</p>
                 </div>
-                <div className="w-8 h-8 bg-success/20 rounded-lg flex items-center justify-center">
-                  <Users className="w-4 h-4 text-success" />
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-success/20 rounded-lg flex items-center justify-center">
+                  <Users className="w-3 h-3 sm:w-4 sm:h-4 text-success" />
                 </div>
               </div>
             </CardContent>
           </Card>
           <Card>
-            <CardContent className="p-6">
+            <CardContent className="p-4 sm:p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground">Contatos Ativos</p>
-                  <p className="text-3xl font-bold">7.893</p>
+                  <p className="text-xs sm:text-sm font-medium text-muted-foreground">Contatos Ativos</p>
+                  <p className="text-xl sm:text-3xl font-bold">7.893</p>
                 </div>
-                <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center">
-                  <Users className="w-4 h-4 text-primary" />
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <Users className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
                 </div>
               </div>
             </CardContent>
           </Card>
           <Card>
-            <CardContent className="p-6">
+            <CardContent className="p-4 sm:p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground">Taxa Ativa</p>
-                  <p className="text-3xl font-bold">95.7%</p>
+                  <p className="text-xs sm:text-sm font-medium text-muted-foreground">Taxa Ativa</p>
+                  <p className="text-xl sm:text-3xl font-bold">95.7%</p>
                 </div>
-                <div className="w-8 h-8 bg-success/20 rounded-lg flex items-center justify-center">
-                  <Users className="w-4 h-4 text-success" />
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-success/20 rounded-lg flex items-center justify-center">
+                  <Users className="w-3 h-3 sm:w-4 sm:h-4 text-success" />
                 </div>
               </div>
             </CardContent>

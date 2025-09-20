@@ -51,18 +51,20 @@ const Landing = () => {
               <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
                 <MessageSquare className="w-4 h-4 text-white" />
               </div>
-              <h1 className="text-xl font-bold text-primary">Publisend</h1>
+              <h1 className="text-lg sm:text-xl font-bold text-primary">Publisend</h1>
             </div>
             
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2 sm:space-x-4">
               <Link to="/login">
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-                  Já sou cliente
+                <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white text-xs sm:text-sm">
+                  <span className="hidden sm:inline">Já sou cliente</span>
+                  <span className="sm:hidden">Cliente</span>
                 </Button>
               </Link>
               <Link to="/login">
-                <Button className="bg-gradient-primary hover:bg-primary-hover">
-                  Teste Grátis
+                <Button size="sm" className="bg-gradient-primary hover:bg-primary-hover text-xs sm:text-sm">
+                  <span className="hidden sm:inline">Teste Grátis</span>
+                  <span className="sm:hidden">Teste</span>
                 </Button>
               </Link>
             </div>
@@ -73,51 +75,51 @@ const Landing = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-hero text-white">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="space-y-6 sm:space-y-8">
               <div className="space-y-4">
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-tight">
                   📈 Diga adeus ao <span className="font-extrabold">desperdício</span> de leads. <span className="font-extrabold">Aumente</span> suas <span className="font-extrabold">vendas</span> com comunicação automatizada que <span className="font-extrabold">conecta</span>, <span className="font-extrabold">emociona</span> e <span className="font-extrabold">converte</span>!
                 </h1>
-                <p className="text-xl text-white/90 leading-relaxed">
+                <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed">
                   Com a Publisend, suas mensagens chegam no momento exato em que o cliente decide. SMS, Voz e URA personalizados que transformam interessados em compradores fiéis.
                 </p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/login">
-                  <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-4">
+                  <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
                     🟢 Teste Grátis por 7 Dias
-                    <ArrowRight className="ml-2 w-5 h-5" />
+                    <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                   </Button>
                 </Link>
-                <p className="text-white/80 text-sm self-center">
+                <p className="text-white/80 text-xs sm:text-sm self-center text-center sm:text-left">
                   Sem compromisso. Comece a vender mais já na primeira semana.
                 </p>
               </div>
             </div>
             
-            <div className="relative">
+            <div className="relative mt-8 lg:mt-0">
               <div className="relative z-10">
-                <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                  <div className="space-y-4">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-white/20">
+                  <div className="space-y-3 sm:space-y-4">
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                        <MessageSquare className="w-6 h-6 text-white" />
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-full flex items-center justify-center">
+                        <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                       </div>
                       <div>
-                        <p className="font-semibold">SMS Recebido</p>
-                        <p className="text-white/80 text-sm">Publisend</p>
+                        <p className="font-semibold text-sm sm:text-base">SMS Recebido</p>
+                        <p className="text-white/80 text-xs sm:text-sm">Publisend</p>
                       </div>
                     </div>
-                    <div className="bg-white/20 rounded-2xl p-4">
-                      <p className="text-white">🔥 Oferta especial para você! 50% OFF por tempo limitado. Clique aqui: bit.ly/oferta123</p>
+                    <div className="bg-white/20 rounded-xl sm:rounded-2xl p-3 sm:p-4">
+                      <p className="text-white text-sm sm:text-base">🔥 Oferta especial para você! 50% OFF por tempo limitado. Clique aqui: bit.ly/oferta123</p>
                     </div>
-                    <div className="flex items-center justify-between text-white/80 text-sm">
+                    <div className="flex items-center justify-between text-white/80 text-xs sm:text-sm">
                       <span>Há 2 minutos</span>
                       <div className="flex items-center space-x-1">
-                        <CheckCircle className="w-4 h-4" />
+                        <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                         <span>Entregue</span>
                       </div>
                     </div>
@@ -125,14 +127,14 @@ const Landing = () => {
                 </div>
               </div>
               
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-white/20 rounded-full flex items-center justify-center animate-bounce">
+              {/* Floating Elements - Hidden on mobile */}
+              <div className="hidden sm:block absolute -top-4 -right-4 w-16 h-16 bg-white/20 rounded-full flex items-center justify-center animate-bounce">
                 <Smartphone className="w-8 h-8 text-white" />
               </div>
-              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center animate-pulse">
+              <div className="hidden sm:block absolute -bottom-4 -left-4 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center animate-pulse">
                 <Mic className="w-6 h-6 text-white" />
               </div>
-              <div className="absolute top-1/2 -right-8 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center animate-ping">
+              <div className="hidden sm:block absolute top-1/2 -right-8 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center animate-ping">
                 <Phone className="w-5 h-5 text-white" />
               </div>
             </div>
@@ -141,56 +143,56 @@ const Landing = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 sm:py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
                 🔥 O que você <span className="font-extrabold">ganha</span> com a <span className="font-extrabold">Publisend</span>?
               </h2>
             </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center p-8 hover:shadow-xl transition-shadow">
-              <CardContent className="space-y-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
-                  <TrendingUp className="w-8 h-8 text-primary" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <Card className="text-center p-6 sm:p-8 hover:shadow-xl transition-shadow">
+              <CardContent className="space-y-4 sm:space-y-6">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
+                  <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">Mais vendas, menos abandono</h3>
-                <p className="text-muted-foreground text-lg">
+                <h3 className="text-xl sm:text-2xl font-bold">Mais vendas, menos abandono</h3>
+                <p className="text-muted-foreground text-base sm:text-lg">
                   Converta até 40% das vendas abandonadas com mensagens automáticas que lembram seu cliente no momento certo.
                 </p>
-                <div className="bg-success/10 border border-success/20 rounded-lg p-4">
-                  <p className="text-success font-semibold">+40% Conversões</p>
+                <div className="bg-success/10 border border-success/20 rounded-lg p-3 sm:p-4">
+                  <p className="text-success font-semibold text-sm sm:text-base">+40% Conversões</p>
                 </div>
               </CardContent>
             </Card>
             
-            <Card className="text-center p-8 hover:shadow-xl transition-shadow">
-              <CardContent className="space-y-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
-                  <Users className="w-8 h-8 text-primary" />
+            <Card className="text-center p-6 sm:p-8 hover:shadow-xl transition-shadow">
+              <CardContent className="space-y-4 sm:space-y-6">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
+                  <Users className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">Atendimento sem filas</h3>
-                <p className="text-muted-foreground text-lg">
+                <h3 className="text-xl sm:text-2xl font-bold">Atendimento sem filas</h3>
+                <p className="text-muted-foreground text-base sm:text-lg">
                   Diminua em até 70% o tempo de espera do seu suporte com URA inteligente que direciona cada cliente para a solução ideal.
                 </p>
-                <div className="bg-success/10 border border-success/20 rounded-lg p-4">
-                  <p className="text-success font-semibold">-70% Tempo de Espera</p>
+                <div className="bg-success/10 border border-success/20 rounded-lg p-3 sm:p-4">
+                  <p className="text-success font-semibold text-sm sm:text-base">-70% Tempo de Espera</p>
                 </div>
               </CardContent>
             </Card>
             
-            <Card className="text-center p-8 hover:shadow-xl transition-shadow">
-              <CardContent className="space-y-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
-                  <Target className="w-8 h-8 text-primary" />
+            <Card className="text-center p-6 sm:p-8 hover:shadow-xl transition-shadow">
+              <CardContent className="space-y-4 sm:space-y-6">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
+                  <Target className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">Engajamento que converte</h3>
-                <p className="text-muted-foreground text-lg">
+                <h3 className="text-xl sm:text-2xl font-bold">Engajamento que converte</h3>
+                <p className="text-muted-foreground text-base sm:text-lg">
                   Mensagens lidas em segundos: até 95% dos SMS são abertos em menos de 3 minutos. Sua marca sempre no topo da atenção do cliente.
                 </p>
-                <div className="bg-success/10 border border-success/20 rounded-lg p-4">
-                  <p className="text-success font-semibold">95% Taxa de Abertura</p>
+                <div className="bg-success/10 border border-success/20 rounded-lg p-3 sm:p-4">
+                  <p className="text-success font-semibold text-sm sm:text-base">95% Taxa de Abertura</p>
                 </div>
               </CardContent>
             </Card>
