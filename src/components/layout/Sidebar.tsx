@@ -12,7 +12,7 @@ import {
 import { cn } from "@/lib/utils";
 
 const navigation = [
-  { name: "Dashboard", href: "/", icon: BarChart3 },
+  { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
   { name: "Campanhas", href: "/campaigns", icon: MessageSquare },
   { name: "Criar Campanha", href: "/campaigns/new", icon: PlusCircle },
   { name: "Listas", href: "/lists", icon: Users },

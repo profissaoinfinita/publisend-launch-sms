@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import { LoginForm } from "@/components/auth/LoginForm";
+import Landing from "./pages/Landing";
 import Index from "./pages/Index";
 import Campaigns from "./pages/Campaigns";
 import NewCampaign from "./pages/NewCampaign";
@@ -27,20 +28,24 @@ const AppRoutes = () => {
     );
   }
 
-  if (!user) {
-    return <LoginForm />;
-  }
-
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/campaigns" element={<Campaigns />} />
-        <Route path="/campaigns/new" element={<NewCampaign />} />
-        <Route path="/templates" element={<Templates />} />
-        <Route path="/lists" element={<Lists />} />
-        <Route path="/billing" element={<Billing />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<LoginForm />} />
+        {user ? (
+          <>
+            <Route path="/dashboard" element={<Index />} />
+            <Route path="/campaigns" element={<Campaigns />} />
+            <Route path="/campaigns/new" element={<NewCampaign />} />
+            <Route path="/templates" element={<Templates />} />
+            <Route path="/lists" element={<Lists />} />
+            <Route path="/billing" element={<Billing />} />
+            <Route path="/settings" element={<Settings />} />
+          </>
+        ) : (
+          <Route path="/dashboard" element={<LoginForm />} />
+        )}
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

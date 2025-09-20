@@ -20,7 +20,7 @@ const Dashboard = () => {
                 <Plus className="w-4 h-4 mr-2" />
                 Nova Campanha
               </Button>
-              <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
+              <Button variant="outline" className="border-white/20 text-white bg-transparent hover:bg-white/10 hover:text-white">
                 <Eye className="w-4 h-4 mr-2" />
                 Ver Tutorial
               </Button>
